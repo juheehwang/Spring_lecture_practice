@@ -30,7 +30,7 @@ public class ApplicationContextExtendsFindTest {
     @Test
     @DisplayName("부모 타입으로 조회시 자식이 둘 이상 있으면, 중복오류가 발생")
     void findBeanByParentTypeBeanName(){
-        DiscountPolicy rateDisCountPolicy = ac.getBean("reteDiscountPolicy",DiscountPolicy.class);
+        DiscountPolicy rateDisCountPolicy = ac.getBean(DiscountPolicy.class);
         assertThat(rateDisCountPolicy).isInstanceOf(RateDiscountPolicy.class);
     }
 
